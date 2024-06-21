@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.icon-box:hover,
+.profile-image:hover,
+.card:hover,
+.certifications:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fa-instagram:hover,
+.fa-github:hover,
+.fa-envelope:hover,
+.fa-phone:hover,
+.fa-map-marker-alt:hover,
+.fa-dribbble:hover,
+.fa-linkedin:hover,
+.fa-twitter:hover {
+    transform: scale(1.2);
+}
+
+/* Custom styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+  .card,
+  .certifications,
+  .icon-box{
+    
+    background: rgba( 0, 0, 0, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 11.5px );
+    -webkit-backdrop-filter: blur( 11.5px );
+    
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: white;
+    
+    overflow: hidden;
+
+  }
+  
+  .my-float{
+    content:; /* Unicode for sun icon in Font Awesome */
+    color: yellow;
+  }
+}
+.profile-image {
+    border-radius: 50%;
+    max-width: 250px;
+    max-height: 250px;
+    margin: 0 auto 1em;
+    width: 100%;
+    opacity: 0.85;
+    background-color: black;
+}
+
+.details h1 {
+    font-size: 3rem;
+    color: #212121;
+    margin-bottom: 20px;
+}
+
+.details h1 span {
+    color: skyblue;
+}
+
+.details p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.social a {
+    font-size: 30px;
+    color: #212121;
+    margin-right: 20px;
+}
+
+.social a:hover {
+    color: orange;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, .55);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, .75);
+}
+
+/* #home .details h1 {
+    font-family: 'Monoton', cursive;
+} */
+
+#home .details span {
+    font-family: 'Playfair Display SC', serif;
+    color: skyblue;
+}
+
+#home .details p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#home .social a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #333;
+}
+
+#about h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* certifications */
+
+
+.certifications {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    /* max-width: 800px; */
+    width: 100%;
+    border-radius: 8px;
+}
+
+.certifications h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.certification {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.certification img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+.certifications img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.cert-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333333;
+}
+
+.cert-info p {
+    margin: 5px 0;
+    color: #666666;
+}
+
+.cert-info a {
+    margin: 5px 0;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.cert-info a:hover {
+    text-decoration: underline;
+}
+
+/* education */
+.card-img-top-full {
+    width: 100%;
+    height: auto;
+}
+
+/* technical skills */
+.icon-box {
+    background-color: #f8f9fa;
+    /* Light gray background */
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    /* Gray border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    /* Space between each icon box */
+    text-align: center;
+}
+
+.icon-box img {
+    max-width: 100%;
+    /* Ensure images don't exceed box width */
+    max-height: 50px;
+    /* Adjust height as needed */
+}
+
+
+.card{
+    border-radius: 20px;
+}
