@@ -53,7 +53,7 @@ I hold several certifications that enhance my skills, including:
 I would love to connect! Feel free to reach out via email at [anuragsrivatsav4@gmail.com] or through my LinkedIn profile [here](https://www.linkedin.com/in/anuragsrivatsav/.
 
 ## AI Bot
-![Bot Icon](https://img.icons8.com/ios-filled/50/000000/chatbot.png)
+![Bot Icon](https://res.cloudinary.com/dvlgixtg8/image/upload/v1721069452/BotScreenshot.jpg)
 
 I've integrated an AI bot on this site that can answer questions about me. You can ask about my projects, skills, or anything else you'd like to know. Just click on the chat icon to start! [https://anuragsportfolioassist.streamlit.app/]
 
