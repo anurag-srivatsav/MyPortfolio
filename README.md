@@ -1,6 +1,4 @@
-Sure! Here's a template for your README file that you can customize further based on your specific details:
 
----
 
 # Portfolio Website
 
@@ -11,6 +9,7 @@ Welcome to my portfolio website! This repository showcases my skills, education,
 - [Introduction](#introduction)
 - [Resume](#resume)
 - [Education](#education)
+-[Experience](#Experience)
 - [Projects](#projects)
 - [Certifications](#certifications)
 - [Contact](#contact)
@@ -22,19 +21,22 @@ This portfolio serves as a reflection of my journey in the tech industry. Here, 
 
 ## Resume
 
-You can download my resume [here](link-to-your-resume).
+You can download my resume [here](https://drive.google.com/file/d/1OKAjYro5tAKMNkAM1xlWInYTT8Tyx2ul/view?pli=1).
 
 ## Education
 
-I have completed my studies in [Your Degree] from [Your University], graduating in [Year]. My education has provided me with a strong foundation in [mention key areas of knowledge or skills].
+I have completed my studies in Bachelor's from KL UNIVERSITY HYDERABAD, graduating in 2025. My education has provided me with a strong foundation in Artificial Intelligence and Data Science.
 
 ## Projects
 
 Below are some of the notable projects I've worked on:
 
-1. **[Project Name 1]**: Brief description of the project and the technologies used.
-2. **[Project Name 2]**: Brief description of the project and the technologies used.
-3. **[Project Name 3]**: Brief description of the project and the technologies used.
+1. **[Task Manager Application with MongoDB]**: Developed a Python and MongoDB-powered web app for task management, integrating features like task addition, completion tracking, and secure user authentication.
+
+2. **[AI Voice Clone]**: Implemented an AI voice clone application leveraging cutting-edge technologies including OpenAI, LangChain, Gradio, PlayHT, and Hugging Face, showcasing proficiency in integrating multiple advanced tools.
+
+3. **[Image Classification (Cat vs. Dog)]**: Developed a deep learning model using Python and TensorFlow/Keras to classify images of cats and dogs.
+
 
 Feel free to explore the projects in detail in the respective folders.
 
@@ -42,17 +44,18 @@ Feel free to explore the projects in detail in the respective folders.
 
 I hold several certifications that enhance my skills, including:
 
-- [Certification Name 1]
-- [Certification Name 2]
-- [Certification Name 3]
-
+- [Google Cloud Data Analytics Certificate]
+- [Oracle Cloud Infrastructure 2024 Generative AI Certified Professional]
+- [Microsoft Certified: Azure AI Fundamentals]
+- [TensorFlow Developer Certificate]
 ## Contact
 
-I would love to connect! Feel free to reach out via email at [your-email@example.com] or through my LinkedIn profile [here](link-to-your-linkedin).
+I would love to connect! Feel free to reach out via email at [anuragsrivatsav4@gmail.com] or through my LinkedIn profile [here](https://www.linkedin.com/in/anuragsrivatsav/.
 
 ## AI Bot
+![Bot Icon](https://img.icons8.com/ios-filled/50/000000/chatbot.png)
 
-I've integrated an AI bot on this site that can answer questions about me. You can ask about my projects, skills, or anything else you'd like to know. Just click on the chat icon to start!
+I've integrated an AI bot on this site that can answer questions about me. You can ask about my projects, skills, or anything else you'd like to know. Just click on the chat icon to start! [https://anuragsportfolioassist.streamlit.app/]
 
 ---
 
@@ -60,4 +63,3 @@ Thank you for visiting my portfolio! I appreciate your interest in my work.
 
 ---
 
-Feel free to adjust the content to match your style and details!
