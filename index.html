@@ -631,92 +631,135 @@
      <!-- msg icon -->
 
 
-    <title>Floating Message Icon</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 2000px; /* To demonstrate the floating effect */
-            font-family: Arial, sans-serif;
-        }
-
-        .floating-icon {
-            position: fixed;
-            left: 10px; /* Adjust as needed */
-            bottom: 20px; /* Adjust as needed */
-            z-index: 1000;
-            cursor: pointer;
-            animation: float 2s infinite;
-            text-align: center;
-        }
-
-        .floating-icon img {
-            width: 80px; /* Increased size */
-            height: 80px; /* Increased size */
-            display: block; /* Ensures the image aligns properly */
-            margin: 0 auto; /* Centers the image horizontally */
-        }
-
-        .icon-label {
-            background-color:#0A2463; 
-            color: orange; /* White text */
-            padding: 5px 10px;
-            border-radius: 12px;
-            font-size: 14px;
-            box-shadow: 0 0 10px rgba(135, 206, 235, 0.8); 
-            font-family: 'Playfair Display SC', serif;
+     <title>Floating Message Icon</title>
+     <style>
+         body {
+             margin: 0;
+             padding: 0;
+             height: 2000px; /* To demonstrate the floating effect */
+             font-family: Arial, sans-serif;
+         }
+ 
+         .floating-icon {
+             position: fixed;
+             left: 10px; /* Fixed position on the left */
+             bottom: 10px; /* Adjust this value to move the icon lower */
+             z-index: 1000;
+             cursor: pointer;
+             animation: float 2s infinite;
+             text-align: center;
+             max-width: 90vw; /* Make it responsive */
+         }
+ 
+         .floating-icon img {
+             width: 10vw; /* Responsive width based on viewport width */
+             max-width: 80px; /* Maximum size */
+             height: auto; /* Maintain aspect ratio */
+             display: block; /* Ensures the image aligns properly */
+             margin: 0 auto; /* Centers the image horizontally */
+             transition: transform 0.3s ease; /* Smooth scale on hover */
+         }
+ 
+         .floating-icon img:hover {
+             transform: scale(1.1); /* Slightly increase size on hover */
+         }
+ 
+         #portfolioBotFrame {
+             display: none; /* Initially hide the iframe */
+             width: 90vw; /* Make the iframe responsive */
+             max-width: 500px; /* Maximum width */
+             height: 80vh; /* Responsive height based on viewport height */
+             border: none; /* No border */
+             border-radius: 12px; /* Rounded corners */
+             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+             background-color: #f9f9f9; /* Light background for chat bubble effect */
+             overflow: hidden; /* Hide overflow */
+             transition: all 0.3s ease; /* Smooth transition for appearance */
+         }
+ 
+         /* Chat bot container to mimic chat interface */
+         .chat-container {
+             position: relative;
+             background-color: white; /* Chat background color */
+             border-radius: 12px; /* Rounded corners */
+             overflow: hidden; /* Hide overflow */
+             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+         }
+ 
+         /* Header for the chat */
+         .chat-header {
+             background-color: #0A2463; /* Header background */
+             color: white; /* Header text color */
+             padding: 10px; /* Padding for header */
+             text-align: center; /* Center align text */
+             font-weight: bold; /* Bold text */
+         }
+ 
+         /* Media queries for smaller screens */
+         @media (max-width: 600px) {
+             .floating-icon {
+                 left: 5px; /* Adjust for smaller screens */
+             }
+         }
+ 
+         @keyframes float {
+             0% {
+                 transform: translateY(0);
+             }
+             50% {
+                 transform: translateY(-10px);
+             }
+             100% {
+                 transform: translateY(0);
+             }
+         }
+ 
+         /* Animation for click event */
+         @keyframes clickAnimation {
+             0% {
+                 transform: scale(1);
+             }
+             50% {
+                 transform: scale(1.2);
+             }
+             100% {
+                 transform: scale(1);
+             }
+         }
+     </style>
+ </head>
+ <body>
+ 
+     <div class="floating-icon" id="floatingIcon">
+         <div class="chat-container" id="chatContainer">
              
-        }
-
-        .icon-label i {
-            margin-right: 5px; /* Adds space between icon and text */
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        /* Animation for click event */
-        @keyframes clickAnimation {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.2);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-    </style>
-</head>
-
-    <div class="floating-icon" id="floatingIcon">
-        <a href="https://anuragsportfolioassist.streamlit.app/" target="_blank">
-            <img src="https://masterbundles.com/wp-content/uploads/2023/08/chat-bot-icon-2-523.png" alt="Message Icon" id="messageIcon">
-        </a>
-        <div class="icon-label">
-            <i class="bi bi-robot"></i>
-            AI Assistant
-        </div>
-    </div>
-
-    <script>
-        document.getElementById('floatingIcon').addEventListener('click', function() {
-            this.style.animation = 'clickAnimation 0.3s';
-            setTimeout(() => {
-                this.style.animation = 'float 2s infinite';
-            }, 300);
-        });
-    </script>
+             <iframe src="https://anurag04-portfoliobot.hf.space" id="portfolioBotFrame"></iframe>
+         </div>
+         <img src="https://masterbundles.com/wp-content/uploads/2023/08/chat-bot-icon-2-523.png" alt="Message Icon" id="messageIcon">
+     </div>
+ 
+     <script>
+         const floatingIcon = document.getElementById('floatingIcon');
+         const portfolioBotFrame = document.getElementById('portfolioBotFrame');
+         const chatContainer = document.getElementById('chatContainer');
+ 
+         floatingIcon.addEventListener('click', function() {
+             // Trigger click animation
+             this.style.animation = 'clickAnimation 0.3s';
+             setTimeout(() => {
+                 this.style.animation = 'float 2s infinite';
+             }, 300);
+ 
+             // Toggle iframe display
+             if (portfolioBotFrame.style.display === 'none' || portfolioBotFrame.style.display === '') {
+                 portfolioBotFrame.style.display = 'block'; // Show the iframe
+                 chatContainer.style.display = 'block'; // Show the chat container
+             } else {
+                 portfolioBotFrame.style.display = 'none'; // Hide the iframe
+                 chatContainer.style.display = 'none'; // Hide the chat container
+             }
+         });
+     </script>
 
 
 
