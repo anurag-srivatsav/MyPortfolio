@@ -668,7 +668,7 @@
              display: none; /* Initially hide the iframe */
              width: 90vw; /* Make the iframe responsive */
              max-width: 500px; /* Maximum width */
-             height: 80vh; /* Responsive height based on viewport height */
+             height: 60vh; /* Responsive height based on viewport height */
              border: none; /* No border */
              border-radius: 12px; /* Rounded corners */
              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
@@ -695,13 +695,15 @@
              font-weight: bold; /* Bold text */
          }
  
-         /* Media queries for smaller screens */
          @media (max-width: 600px) {
-             .floating-icon {
-                 left: 5px; /* Adjust for smaller screens */
-             }
-         }
- 
+            .floating-icon img {
+                width: 70px; /* Width for mobile devices */
+            }
+        
+            .floating-icon {
+                left: 5px; /* Adjust for smaller screens */
+            }
+        }
          @keyframes float {
              0% {
                  transform: translateY(0);
