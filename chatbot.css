@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+    /* To demonstrate the floating effect */
+}
+
+.floating-icon {
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    animation: float 2s infinite;
+    text-align: center;
+}
+
+.floating-icon img {
+    width: 80px;
+    height: 80px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Chat window styles */
+.chat-window {
+    position: fixed;
+    right: 0px;
+    bottom: 100px;
+    width: 300px;
+    height: 450px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+    display: none;
+    /* Initially hidden */
+    z-index: 999;
+    flex-direction: column;
+    /* Align items vertically */
+    justify-content: flex-start;
+    /* Align items at the start */
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+    background-color: skyblue;
+    color: skyblue;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.header-icon {
+    width: 50px;
+    /* Adjust size as needed */
+    height: 50px;
+    /* Adjust size as needed */
+    margin-right: 10px;
+    /* Space between icon and text */
+}
+
+.header-name {
+    display: flex;
+    flex-direction: column;
+    /* Align name and status vertically */
+    font-size: 14px;
+    /* Adjust font size */
+    color: #f0f0f0;
+    /* Light gray color for chatbot text */
+    margin-right: auto;
+    /* Push the status to the right */
+}
+
+.name {
+    font-weight: bold;
+    /* Make the name bold */
+    font-size: 16px;
+    color: black;
+
+    /* Increase font size for better visibility */
+    margin-bottom: 2px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    /* Center status items */
+    font-size: 12px;
+    /* Smaller font size for status */
+    color: white;
+    /* Light gray for status */
+
+}
+
+.status-dot {
+    width: 8px;
+    /* Dot size */
+    height: 8px;
+    /* Dot size */
+    border-radius: 50%;
+    /* Make it circular */
+    background-color: green;
+    /* Green dot */
+    margin-right: 5px;
+    /* Space between text and dot */
+}
+
+.close-button {
+    margin-left: auto;
+    /* Push to the right */
+    background: none;
+    /* Remove background */
+    border: none;
+    /* Remove border */
+    color: white;
+    /* Close button color */
+    font-size: 30px;
+    /* Close button font size */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+.chat-iframe {
+    width: 100%;
+    height: calc(100% - 50px);
+    /* Adjust height to fit header */
+    border: none;
+
+    /* Remove iframe border */
+}

@@ -1,0 +1,79 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    
+    /* Light background for simplicity */
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+img.profile-image {
+    width: 80px;
+    /* Set desired width */
+    height: 80px;
+    /* Set desired height */
+    border-radius: 50%;
+    /* Make it circular */
+    margin-bottom: 20px;
+    /* Space below the image */
+    border: 3px solid #007BFF;
+    /* Border color */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Shadow effect */
+    object-fit: cover;
+    /* Maintain aspect ratio */
+}
+
+h2 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+input[type="password"] {
+    padding: 15px;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="password"]:focus {
+    border-color: #007BFF;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(0);
+}

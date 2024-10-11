@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Message Icon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 2000px;
+            /* To demonstrate the floating effect */
+        }
+
+        .floating-icon {
+            position: fixed;
+            right: 10px;
+            bottom: 20px;
+            z-index: 1000;
+            cursor: pointer;
+            animation: float 2s infinite;
+            text-align: center;
+        }
+
+        .floating-icon img {
+            width: 80px;
+            height: 80px;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Chat window styles */
+        .chat-window {
+            position: fixed;
+            right: 0px;
+            bottom: 100px;
+            width: 300px;
+            height: 450px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+
+            display: none;
+            /* Initially hidden */
+            z-index: 999;
+            flex-direction: column;
+            /* Align items vertically */
+            justify-content: flex-start;
+            /* Align items at the start */
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            /* Center items vertically */
+            background-color: skyblue;
+            color: skyblue;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .header-icon {
+            width: 50px;
+            /* Adjust size as needed */
+            height: 50px;
+            /* Adjust size as needed */
+            margin-right: 10px;
+            /* Space between icon and text */
+        }
+
+        .header-name {
+            display: flex;
+            flex-direction: column;
+            /* Align name and status vertically */
+            font-size: 14px;
+            /* Adjust font size */
+            color: #f0f0f0;
+            /* Light gray color for chatbot text */
+            margin-right: auto;
+            /* Push the status to the right */
+        }
+
+        .name {
+            font-weight: bold;
+            /* Make the name bold */
+            font-size: 16px;
+            color: black;
+
+            /* Increase font size for better visibility */
+            margin-bottom: 2px;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            /* Center status items */
+            font-size: 12px;
+            /* Smaller font size for status */
+            color: white;
+            /* Light gray for status */
+
+        }
+
+        .status-dot {
+            width: 8px;
+            /* Dot size */
+            height: 8px;
+            /* Dot size */
+            border-radius: 50%;
+            /* Make it circular */
+            background-color: green;
+            /* Green dot */
+            margin-right: 5px;
+            /* Space between text and dot */
+        }
+
+        .close-button {
+            margin-left: auto;
+            /* Push to the right */
+            background: none;
+            /* Remove background */
+            border: none;
+            /* Remove border */
+            color: white;
+            /* Close button color */
+            font-size: 30px;
+            /* Close button font size */
+            cursor: pointer;
+            /* Pointer cursor on hover */
+        }
+
+        .chat-iframe {
+            width: 100%;
+            height: calc(100% - 50px);
+            /* Adjust height to fit header */
+            border: none;
+
+            /* Remove iframe border */
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="floating-icon" id="floatingIcon">
+        <img src="https://masterbundles.com/wp-content/uploads/2023/08/chat-bot-icon-2-523.png" alt="Message Icon" id="messageIcon">
+    </div>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <img src="https://res.cloudinary.com/dvlgixtg8/image/upload/v1728584478/Robo-active.png" alt="Robot Icon" class="header-icon">
+            <div class="header-name">
+                <span class="name">Nani</span>
+                <div class="status">
+                    <div class="status-dot"> </div>
+                    <span>IRIS</span>
+                </div>
+            </div>
+            <button class="close-button" id="closeButton">&times;</button>
+        </div>
+        <iframe class="chat-iframe" id="chatIframe" src="https://anurag04-portfoliobot.hf.space"></iframe>
+    </div>
+
+    <script>
+        const floatingIcon = document.getElementById('floatingIcon');
+        const chatWindow = document.getElementById('chatWindow');
+        const closeButton = document.getElementById('closeButton');
+
+        floatingIcon.addEventListener('click', function() {
+            chatWindow.style.display = chatWindow.style.display === 'none' || chatWindow.style.display === '' ? 'flex' : 'none';
+            speak("Hi there! I'm Nani, ready to help. What would you like to talk about?");
+        });
+
+        closeButton.addEventListener('click', function() {
+            chatWindow.style.display = 'none'; // Hide chat window on close
+        });
+
+        function speak(text) {
+            const speech = new SpeechSynthesisUtterance();
+            speech.text = text;
+            speech.rate = 0.9;
+            speech.pitch = 1;
+            speech.lang = 'en-US'; // Set language
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+
+
+
+
+
+
+
+
+    
+    <title>Dark Mode Toggle with Voice</title>
+    <style>
+        body {
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .my-float {
+            margin-top: 22px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            font-size: 40px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .my-float:hover {
+            transform: scale(1.3);
+        }
+
+        .toggle-dark {
+            display: none;
+        }
+
+        .toggle-light {
+            display: none;
+        }
+
+        /* Show the correct image based on mode */
+        body.dark-mode .toggle-dark {
+            display: block;
+        }
+
+        body:not(.dark-mode) .toggle-light {
+            display: block;
+        }
+    </style>
+    </head>
+
+    <body>
+        <!-- Custom images for dark and light mode -->
+        <a href="#" class="float" onclick="toggleDarkMode(event)">
+            <img src="https://res.cloudinary.com/dvlgixtg8/image/upload/v1728584478/Robo-active.png" class="my-float toggle-light" alt="Light Mode Icon">
+            <img src="https://res.cloudinary.com/dvlgixtg8/image/upload/v1728584478/Robo-sleeping.png" class="my-float toggle-dark" alt="Dark Mode Icon">
+        </a>
+
+        <script>
+            // Function to speak the mode change
+            function speak(message) {
+                const utterance = new SpeechSynthesisUtterance(message);
+                window.speechSynthesis.speak(utterance);
+            }
+
+            // Function to toggle dark mode
+            function toggleDarkMode(event) {
+                event.preventDefault();
+                const element = document.body;
+                element.classList.toggle("dark-mode");
+
+                // Store the dark mode preference in localStorage
+                const isDarkMode = element.classList.contains("dark-mode");
+                localStorage.setItem("darkMode", JSON.stringify(isDarkMode));
+
+
+// Announce the mode change
+                if (isDarkMode) {
+                    speak("Activating wake-up protocol. Night vision systems online. Ready for an enhanced experience.");
+                } else {
+                    speak("Light Mode engaged. Infusing brilliance into your journey. Welcome to the realm of innovation.");
+                }
+            }
+
+            // Check if dark mode preference is stored and apply it on page load
+            document.addEventListener("DOMContentLoaded", function() {
+                const darkMode = localStorage.getItem("darkMode");
+                const isDarkMode = darkMode ? JSON.parse(darkMode) : false;
+
+                const element = document.body;
+                if (isDarkMode) {
+                    element.classList.add("dark-mode");
+                } else {
+                    element.classList.remove("dark-mode");
+                }
+            });
+        </script>
+    </body>
+
+</html>
