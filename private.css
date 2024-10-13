@@ -5,8 +5,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-/*     background-color: #f0f0f0; */
-    background-image: url("galaxy.jpg");
+    background-size:cover ;
+    background-image: url('https://media.tenor.com/v1yXXhS_vZQAAAAC/wallpaper-halloween.gif');
     
     /* Light background for simplicity */
 }
