@@ -33,7 +33,7 @@ nav .navbar-nav li a{
 .fa-map-marker-alt:hover,
 .fa-dribbble:hover,
 .fa-linkedin:hover,
-.fa-twitter:hover {
+.fa-brands fa-x-twitter:hover {
     transform: scale(1.2);
 }
 
