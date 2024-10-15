@@ -46,7 +46,25 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: white;
 }
+/* changes 15 */
+.education-heading{
+    color:#001F3F;
+}
+.experience-heading{
+    color: #36454F;
+}
+.skills-heading{
+    color:#001F3F;
+}
+.certifications-heading{
+    color:#001F3F;
+}
+.projects-heading{
+    color:#001F3F;
+}
 
+
+/* changes 15 */
 
 
 
@@ -72,6 +90,11 @@ body {
   .profile-social{
     color:white;
   }
+    /* changes 15 */
+  .section-heading{
+    color: skyblue;
+  }
+/* changes 15 */
  .cert-info h3{
      color:white;
  }
