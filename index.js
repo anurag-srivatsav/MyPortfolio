@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         certDiv.innerHTML = `
             <img src="${cert.badge}" alt="Certification Badge">
-            <div class="cert-info">
+            <div class="cert-info" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100">
                 <h3>${cert.title}</h3>
                 <p>Issued by: ${cert.authority}</p>
                 <a href="${cert.link}" target="_blank"><i class="fas fa-eye"></i>View Certification</a>
@@ -121,3 +121,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         certContainer.appendChild(certDiv);
     });
+
+    AOS.init({
+        duration: 1000,   // Animation duration (in ms)
+        once: false,       // If true, animation will happen once when it comes into view
+        offset: 100,      // Distance from the top of the screen before it triggers the animation
+        easing: 'ease-in-out',  // Easing effect
+    });
+
+    AOS.refresh();
