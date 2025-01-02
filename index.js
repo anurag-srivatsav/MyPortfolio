@@ -129,4 +129,4 @@ document.addEventListener('DOMContentLoaded', function() {
         easing: 'ease-in-out',  // Easing effect
     });
 
-    AOS.refresh();
+ 
