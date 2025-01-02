@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     AOS.init({
         duration: 1000,   // Animation duration (in ms)
-        once: false,       // If true, animation will happen once when it comes into view
+        once: true,       // If true, animation will happen once when it comes into view
         offset: 100,      // Distance from the top of the screen before it triggers the animation
         easing: 'ease-in-out',  // Easing effect
     });
