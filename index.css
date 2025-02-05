@@ -63,7 +63,9 @@ body {
     color:#001F3F;
 }
 
-
+.proj-btn{
+    color:black;
+}
 /* changes 15 */
 
 
@@ -86,6 +88,9 @@ body {
     
     overflow: hidden;
 
+  }
+    .proj-btn{
+    color:whitesmoke;
   }
   .profile-social{
     color:white;
